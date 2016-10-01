@@ -1,0 +1,1 @@
+@daily /usr/local/bin/curator --config=/curator/curator.yml /curator/close_indices.yml >> /var/log/close_indices.log 2>&1
