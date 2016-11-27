@@ -1,0 +1,10 @@
+{
+      "title": "JVM Memory Ratio",
+      "visState": "{\"title\":\"JVM Memory Ratio\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(q='jvm.memory.total.used', metric='avg:metric_value', split='instance_name.keyword:5').divide(.es(q='jvm.memory.total.max', metric='avg:metric_value')).title('JVM Memory Ratio  (JVM memory used / JVM memory max)')\",\"interval\":\"1m\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+}

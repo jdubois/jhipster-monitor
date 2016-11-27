@@ -1,0 +1,10 @@
+{
+      "title": "Applications",
+      "visState": "{\"title\":\"Applications\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"60\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"instance_name.keyword\",\"customLabel\":\"Applications\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"instance_name.keyword\",\"customLabel\":\"Service Instances\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }

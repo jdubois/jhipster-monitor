@@ -1,6 +1,6 @@
 {
       "title": "JVM Memory",
-      "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{\"field\":\"metric_value\"},\"schema\":\"metric\",\"type\":\"avg\"},{\"id\":\"3\",\"params\":{\"field\":\"metric_name.raw\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":4},\"schema\":\"bucket\",\"type\":\"terms\"},{\"id\":\"2\",\"params\":{\"field\":\"instance_name.raw\",\"order\":\"desc\",\"orderBy\":\"1\",\"row\":false,\"size\":5},\"schema\":\"split\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"perPage\":4,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false},\"title\":\"JVM Memory\",\"type\":\"table\"}",
+      "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{\"field\":\"metric_value\"},\"schema\":\"metric\",\"type\":\"avg\"},{\"id\":\"3\",\"params\":{\"field\":\"metric_name.keyword\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":4},\"schema\":\"bucket\",\"type\":\"terms\"},{\"id\":\"2\",\"params\":{\"field\":\"instance_name.keyword\",\"order\":\"desc\",\"orderBy\":\"1\",\"row\":false,\"size\":5},\"schema\":\"split\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"perPage\":4,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false},\"title\":\"JVM Memory\",\"type\":\"table\"}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,

@@ -1,4 +1,4 @@
-FROM elasticsearch:2.4.1
+FROM elasticsearch:5.0.0
 
 VOLUME ["/usr/share/elasticsearch/data"]
 
@@ -7,11 +7,7 @@ RUN \
   apt-get update && \
   apt-get install -y cron python python-dev python-pip python-setuptools supervisor && \
   apt-get clean && \ 
-  pip install \ 
-      urllib3==1.12 \
-      PyYAML==3.11 \
-      elasticsearch==2.4.0 \
-      elasticsearch-curator==4.1.1
+  pip install elasticsearch-curator==4.2.3.post1
 
 # Add Supervisor's configuration
 RUN mkdir -p /var/log/supervisor

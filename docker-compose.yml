@@ -8,6 +8,9 @@ services:
         # Uncomment this section to have elasticsearch data loaded from a volume
         #volumes:
         #   - ./log-data:/usr/share/elasticsearch/data
+        environment:
+            - ES_JAVA_OPTS=-Xms1g -Xmx1g
+            - bootstrap.ignore_system_bootstrap_checks=true
 
     jhipster-logstash:
         build: jhipster-logstash/
@@ -27,8 +30,8 @@ services:
         #volumes:
         #    - ./jhipster-console/dashboards:/tmp/dashboards
 
-    jhipster-alerter:
-        build: jhipster-alerter/
+    #jhipster-alerter:
+    #    build: jhipster-alerter/
         # Uncomment this section to enable alerting
         #volumes:
         #    - ./alerts/config.yaml:/opt/elastalert/config.yaml
