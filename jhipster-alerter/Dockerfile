@@ -1,9 +1,9 @@
 FROM python:2.7-alpine
 
-RUN apk update && apk upgrade && apk add bash curl tar musl-dev linux-headers g++
+RUN apk update && apk upgrade && apk add bash curl tar musl-dev linux-headers g++ libffi-dev libffi openssl-dev
 
 ENV SET_CONTAINER_TIMEZONE false
-ENV ELASTALERT_VERSION v0.1.8
+ENV ELASTALERT_VERSION v0.1.14
 ENV CONTAINER_TIMEZONE Europe/Paris
 ENV ELASTALERT_URL https://github.com/Yelp/elastalert/archive/${ELASTALERT_VERSION}.tar.gz
 
@@ -23,8 +23,8 @@ RUN curl -Lo elastalert.tar.gz ${ELASTALERT_URL} && \
 
 WORKDIR /opt/elastalert
 
-RUN python setup.py install && \
-    pip install -e .
+RUN  pip install "setuptools>=11.3" && \
+ python setup.py install
 
 COPY ./start-elastalert.sh /opt/start-elastalert.sh
 RUN chmod +x /opt/start-elastalert.sh

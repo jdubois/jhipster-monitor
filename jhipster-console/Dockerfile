@@ -1,4 +1,4 @@
-FROM kibana:5.1.2
+FROM kibana:5.4.0
 
 RUN apt-get update
 RUN apt-get -y install curl
