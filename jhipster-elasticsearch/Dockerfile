@@ -1,4 +1,4 @@
-FROM elasticsearch:5.1.2-alpine
+FROM elasticsearch:5.4.0-alpine
 
 VOLUME ["/usr/share/elasticsearch/config"]
 VOLUME ["/usr/share/elasticsearch/data"]
