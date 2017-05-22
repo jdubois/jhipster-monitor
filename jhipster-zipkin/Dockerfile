@@ -1,8 +1,8 @@
-FROM openzipkin/zipkin:1.20
+FROM openzipkin/zipkin:1.26.0
 
 # Embed zipkin dependencies, a spark job to compute the graph between microservices
 ENV ZIPKIN_REPO https://jcenter.bintray.com
-ENV ZIPKIN_DEPENDENCIES_VERSION 1.4.0
+ENV ZIPKIN_DEPENDENCIES_VERSION 1.5.4
 ENV STORAGE_TYPE elasticsearch
 
 RUN apk add --no-cache coreutils && \
