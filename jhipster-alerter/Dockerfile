@@ -24,6 +24,7 @@ WORKDIR /opt/elastalert
 
 RUN pip install "requests==2.18.1" && \ 
     pip install "setuptools>=11.3" && \
+    sed -i "s_'elasticsearch'_'elasticsearch==6.4.0'_g" setup.py && \
     python setup.py install
 
 COPY wait-for-elasticsearch.sh start-elastalert.sh /opt/
