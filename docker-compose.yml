@@ -1,13 +1,16 @@
 version: '3'
+volumes:
+    esdata:
 services:
     # https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
     jhipster-elasticsearch:
         build: jhipster-elasticsearch/
         ports:
             - "9200:9200"
-        # Uncomment this section to have elasticsearch data loaded from a volume
-        #volumes:
-        #   - ./log-data:/usr/share/elasticsearch/data
+        # Replace "esdata" by relative (e.g. ./log-data) or full (e.g. /var/lib/elasticsearch/data) path
+        # if you want to keep data externally instead of docker volume
+        volumes:
+            - esdata:/usr/share/elasticsearch/data
     jhipster-logstash:
         build: jhipster-logstash/
         environment:
